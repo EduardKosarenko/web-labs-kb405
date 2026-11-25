@@ -6,9 +6,9 @@ const links = [
   { href: '#contacts', text: 'Контакти' },
 ];
 
-function Header({ name, group }) {
+function Header({ name, group, theme, onToggleTheme }) {
   return (
-    <header className="bg-emerald-900 text-white px-6 py-10 shadow-lg">
+    <header className="bg-emerald-900 dark:bg-emerald-950 text-white px-6 py-10 shadow-lg">
       <div className="max-w-5xl mx-auto flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
           <h1 className="text-4xl font-serif font-bold tracking-wide">{name}</h1>
@@ -27,6 +27,13 @@ function Header({ name, group }) {
               </li>
             ))}
           </ul>
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            className="mt-3 px-3 py-1 rounded-full bg-white text-emerald-900 hover:bg-emerald-100 cursor-pointer transition"
+          >
+            {theme === 'dark' ? 'Денна тема' : 'Нічна тема'}
+          </button>
         </nav>
       </div>
     </header>
