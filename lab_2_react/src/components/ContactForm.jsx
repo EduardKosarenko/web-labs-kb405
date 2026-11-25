@@ -21,7 +21,7 @@ function ContactForm() {
             className="w-full max-w-md bg-white dark:bg-stone-800 p-6 rounded-xl shadow-lg"
           >
             <h2 className="text-2xl font-serif font-bold mb-3">Зворотний зв'язок</h2>
-            <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+            <form action="https://formspree.io/f/xeagvdyz" method="POST">
               <label>
                 Ім'я
                 <input type="text" name="name" required className={inputClass} />
