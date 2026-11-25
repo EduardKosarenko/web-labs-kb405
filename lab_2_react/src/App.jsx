@@ -8,14 +8,18 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-stone-100 text-stone-800">
       <Header name="Косаренко Едуард" group="КБ-405" />
-      <main>
-        <About />
-        <Experience />
-        <Education />
-        <Skills />
-        <Contacts />
+      <main className="max-w-5xl mx-auto p-4 md:p-8 grid gap-6 md:grid-cols-3">
+        <div className="md:col-span-2 space-y-6">
+          <About />
+          <Experience />
+        </div>
+        <div className="space-y-6">
+          <Education />
+          <Skills />
+          <Contacts />
+        </div>
       </main>
       <Footer />
     </div>

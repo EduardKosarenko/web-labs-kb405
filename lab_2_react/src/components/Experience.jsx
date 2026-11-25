@@ -31,11 +31,13 @@ const projects = [
 
 function Experience() {
   return (
-    <section id="experience">
-      <h2>Досвід</h2>
-      {projects.map((p) => (
-        <Project key={p.title} title={p.title} date={p.date} tasks={p.tasks} />
-      ))}
+    <section id="experience" className="bg-white p-6 rounded-xl shadow">
+      <h2 className="text-2xl font-serif font-bold mb-3">Досвід</h2>
+      <div className="space-y-4">
+        {projects.map((p) => (
+          <Project key={p.title} title={p.title} date={p.date} tasks={p.tasks} />
+        ))}
+      </div>
     </section>
   );
 }
